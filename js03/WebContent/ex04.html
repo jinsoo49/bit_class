@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">
+		
+		// 4. 배열, array[]
+		
+			//배열은 기본 타입이 존재하지 않으므로 반드시 객체를 찍어내게됨
+			var a = [222,333,444];			// = new Array(222,333,444);
+			var b = new Array();
+			b.push('aaaa');
+			b.push('cccc');
+			b.push('bbbb');
+			b.push('ffff');
+			b.push('iiii');
+			
+			var func = function (a,b){
+				return b.charCodeAt(0)-a.charCodeAt(0);				
+			};
+			
+			//콜백함수, 함수의 인자로 함수를 받아야 정렬 사용가능
+			b.sort(func);
+			for(var i in b){		//큐 - 넣은 순서대로 뽑아내고 싶을때
+				console.log(b[i]);
+			}
+			
+			while(b.length){		//스택 - 역순으로 뽑아내고 싶을때
+				console.log(b.pop());
+			}
+		</script>
+	</head>
+	<body>
+	
+	</body>
+</html>

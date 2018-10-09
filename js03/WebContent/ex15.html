@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">
+			function myBack(){
+				history.back();
+			}
+			function myForward(){
+				history.forward();
+			}
+			function myBack2(){
+				history.go(-2);							// 앞으로갈땐 양수 뒤로갈땐 음수
+			}
+			
+			
+		</script>
+	</head>
+	<body>
+		<h1>ex15 page</h1>
+		<button onclick="myBack();">back</button>
+		<button onclick="myForward();">myForward</button>
+		<button onclick="myBack2();">2back</button>
+	</body>
+</html>

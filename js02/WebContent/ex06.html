@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">
+			
+		
+			/* a=100;			// 사용가능, window가 생략되어있음
+							// var->명시적으로 선언하는것뿐 반드시 사용할 필요는 없음
+			alert(a); */
+			
+			var a = 100;	//전역				
+			// 윈도우에 기록하므로 실행하는 순간에 컴파일됨
+			function func01(){
+				a=4321;			//전역
+				var a=1234;		//지역
+				console.log('func01 run : '+a);
+			}		
+			// ◆ javascript 안에서의 전역과 지역변수의 차이
+			func01();			
+			alert(a);			
+			
+			// 앞에 window가 없으므로 실행시에 컴파일 되지 않음
+			var func02=function (){
+				console.log();
+			};				// ; 반드시 삽입
+			func02();
+			
+			(function (){console.log('func run');})();		// 익명함수 실행가능
+			
+			console.log('------------------------------------');
+			
+			var obj = new Object(); 
+			obj={'key1':'abcd', 'key2':1234, 'key3': function(){
+					console.log(obj.key2);			// obj = this
+				}
+			};
+			obj.key3();
+			
+			
+		</script>
+	</head>
+	<body>
+	
+	</body>
+</html>

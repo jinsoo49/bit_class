@@ -1,0 +1,20 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+			<tr>
+				<td align="center" bgcolor="#595959">
+					<b>
+					<a href = "/web09/" style="text-decoration: none">
+					<img src="/web09/imgs/home.png">
+					</a>
+					<a href = "/web09/guest/list.jsp" style="text-decoration: none">
+					<img src="/web09/imgs/list.png">
+					</a>
+					<a href = "/web09/guest/login" style="text-decoration: none">
+					<img src="/web09/imgs/login.png">
+					</a>
+					</b>
+				</td>
+			</tr>
+			<tr>
+				<td align="center" valign="top">
+				<!-- content start -->

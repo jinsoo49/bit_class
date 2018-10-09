@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<style type="text/css">
+			body{
+				width: 500px;
+				margin: 0px auto;
+			}
+			h1 {
+				width: 500px;
+				border-bottom: double 2px black;
+				text-align: center;				
+			}
+			div>label:first-child, div>span, div>.label{
+				width: 30%;
+				display: inline-block;
+				background-color: #ebebeb;
+				color: black;
+				font-weight: bold;
+				text-align: center;				
+			}
+			form>div{
+				margin-bottom: 20px;
+			}
+			form>div>input[type='text'], form>div>input[type='password'], form>div>select{
+				width: 30%;
+			}
+			.err{
+				background-color: white;	
+				color: red;
+				font-style: italic;
+			}
+			
+			
+		</style>		
+		<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+		<script type="text/javascript">
+			
+			function checkID(){
+				var id = $('input').first().val();
+				for(var i=0; i<id.length; i++){
+					var su = id.charCodeAt(i);
+					if(i==0){
+						if(!(su >= 65 && su<= 90 || su >= 97 && su <= 122)){
+							return false;
+						}else if(su >= 65 && su<= 90 || su >= 97 && su <= 122 || su>=48 && su<= 57){
+							return false;
+						}
+					}
+				}
+				return true;
+			}
+			
+			function checkPw(){
+				var boo1 = false;
+				var boo2 = false;
+				var boo3 = false;
+				var pw = $('input').eq(1).val();
+				for(var i=0; i<pw.length; i++){
+					var su = pw.charCodeAt(i);
+					if(su>=65 && su<=90){
+						boo1 = true;
+					}
+					if(su>=97 && su<=122){
+						boo2 = true;
+					}
+					if(su>=48 && su<=57){
+						boo3 = true;
+					}
+				}
+
+				if(boo1 && boo2 && boo3){
+					return true;
+				}else{
+					return false;
+				}				
+			}
+			
+			function checkRe(){
+				var pw = $('input').eq(1).val();
+				var re = $('input').eq(2).val();
+				if(pw == re){
+					return true;
+				}else{
+					return false;
+				}
+			}
+			
+		
+			$(document).ready(function (){
+				$('form input').blur(function(e){
+					var i = $('form input').index(this);			// index번호 출력
+					$('.err').remove();
+					var param= $(this).val();
+					var err=$('<span/>').addClass('err');
+					var msg;					
+					
+					if(param==''){
+						msg = '값이 비었음';
+					}else{
+						if(i==0 && !checkID())	msg = '영문, 숫자만 가능';			
+						if(i==1 && !checkPw())	msg = '조합 확인';	
+						if(i==2 && !checkRe())	msg = '동일하지 않음';	
+					}
+						$(err).text(msg);
+						param=$(this).after(err);
+					
+					/* 
+					if(i==0){
+						$('.err').remove();
+						var param= $(this).val();
+						if(param==''){
+							param=$(this).eq(0).after('<span class="err">값이 비었음</span>');
+						}else if(!checkID()){
+							param=$(this).eq(0).after('<span class="err">영문, 숫자만 가능</span>');
+						}						
+					}else if(i==1){
+						if(param==''){
+							param=$(this).eq(1).after('<span class="err">값이 비었음</span>');
+						}else if(!checkPw()){
+							param=$(this).eq(1).after('<span class="err">조합 확인</span>');
+						}
+					}else if(i==2){
+						if(param==''){
+							param=$(this).eq(2).after('<span class="err">값이 비었음</span>');
+						}else if(!checkRe()){
+							param=$(this).eq(2).after('<span class="err">동일하지 않음</span>');
+						}
+					} */				
+				});
+				
+				
+				$('form').submit(function(){
+					$('.err').remove();
+					var id = $('input').first().val();
+					if(id==''){
+						id=$('input').first().after('<span class="err">값이 비었음</span>');
+					}else if(!checkID()){
+						id=$('input').first().after('<span class="err">영문, 숫자만 가능</span>');
+					}
+					
+					var pw = $('input').eq(1).val();
+					if(pw==''){
+						pw=$('input').eq(1).after('<span class="err">값이 비었음</span>');
+					}else if(!checkPw()){
+						pw=$('input').eq(1).after('<span class="err">조합 확인</span>');
+					}
+					var re = $('input').eq(2).val();
+					if(re==''){
+						re=$('input').eq(2).after('<span class="err">값이 비었음</span>');
+					}else if(!checkRe()){
+						re=$('input').eq(2).after('<span class="err">동일하지 않음</span>');
+					}
+					
+					var ch1 = $('input[type="checkbox"]').eq(0).prop('checked');
+					var ch2 = $('input[type="checkbox"]').eq(1).prop('checked');
+					var ch3 = $('input[type="checkbox"]').eq(2).prop('checked');
+					
+					if(!(ch1||ch2||ch3)){						
+						$('form>div:eq(5)').append('<span class ="err">적어도 하나 선택</span>');
+					}					
+					
+					var radio = $('input[type="radio"]').each(function(){
+						if($(this).prop('checked')){
+							radio = $(this).val();
+						}
+					});
+					confirm(radio+'부 지원합니까?');
+					
+					return false;
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<h1>회 원 가 입</h1>
+		<form>
+			<div>
+				<label for="id">ID</label>
+				<input type="text" name="id" id="id"/>
+			</div>
+			<div>
+				<label for="pw">PW</label>
+				<input type="password" name="pw" id="pw"/>
+			</div>
+			<div>
+				<label for="re">pw 확인</label>
+				<input type="button" id="re"/>
+			</div>
+			<div>
+				<label for="name">name</label>
+				<input type="text" name="name" id="name"/>
+			</div>
+			<div>
+				<label for="age">age</label>
+				<input type="range" name="age" id="age" min="1" max="99"/>
+			</div>
+			<div><span class="label">취미</span>
+				<input type="checkbox" name="ho1" id="ho1" value="hobby1"/>
+				<label for="ho">야구</label>
+				<input type="checkbox" name="ho2" id="ho2" value="hobby2"/>
+				<label for="ho">농구</label>
+				<input type="checkbox" name="ho3" id="ho3" value="hobby3"/>
+				<label for="ho">배구</label>
+			</div>
+			<div><span class="label">학력</span>
+				<select name="edu">
+					<option>고졸</option>
+					<option>초대졸</option>
+					<option>학사</option>
+					<option>석사</option>
+				</select>
+			</div>
+			<div><span class="label">지원분야</span>
+				<input type="radio" name="field" id="field1" value="영업" checked="checked"/>
+				<label for="field1">영업부</label>
+				<input type="radio" name="field" id="field2" value="생산"/>
+				<label for="field2">생산부</label>
+				<input type="radio" name="field" id="field3" value="관리"/>
+				<label for="field3">관리부</label>
+				<input type="radio" name="field" id="field4" value="회계"/>
+				<label for="field4">회계부</label>
+			</div>
+			<div>
+				<button type="submit">가입</button>
+				<button type="reset">취소</button>
+				<button type="button">back</button>
+			</div>
+		</form>
+	</body>
+</html>

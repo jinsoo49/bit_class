@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<style type="text/css">
+			div{
+				width: 200px;
+				height: 200px;
+				background-color: yellow;
+			}
+			div>div{
+				width: 100px;
+				height: 100px;
+				background-color: #ebebeb;
+			}
+		</style>
+		<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+		<script type="text/javascript">
+			var temp = document.createElement('h2');
+			var temp2 = document.createTextNode("msg");
+			temp.appendChild(temp2);
+			var div = document.querySelector('div');
+			div.appendChild(temp);
+
+			/* ------------------------------------------------- */
+			
+			window.onload = function(){
+				var h2 = $('<h2/>').text('msg');
+				$('div').html(h2);
+			};
+			
+		</script>
+	</head>
+	<body>
+		<h1>하위 노드제어</h1>
+		<p>하위 노드에는 엘리먼트와 텍스트노드가 있음</p>
+		<div>
+			<div></div>
+		</div>
+		<ul>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</body>
+</html>

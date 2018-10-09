@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">
+			// 6. function
+			
+			var su = 100;
+			function func1(a){
+				var su = 1234;
+				//su=200;
+				//console.log(arguments[0]);
+				//console.log(arguments[1]);
+				for(var msg in a){
+					console.log(a[msg]);
+				}
+				console.log('func1 run : '+su);
+				return;
+			}
+			
+			var func2 = function(){
+				console.log('func2 run');
+				return;
+			};
+			func1({'key1':1111,'key2':2222});
+			console.log(su);
+		</script>
+	</head>
+	<body>
+	
+	</body>
+</html>

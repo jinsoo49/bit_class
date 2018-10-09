@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/mygrid2.css"/>
+    <style>
+        
+        @media screen and (max-width: 767px){/*.col-xs:<768px, .col-sm:태블릿*/
+            /* 모바일 */
+            .mcontainer{
+                width: 100%;
+            }
+
+            .mgrid1, .mgrid2, .mgrid3, .mgrid4, 
+            .mgrid5, .mgrid6, .mgrid7, .mgrid8, 
+            .mgrid9, .mgrid10, .mgrid11, .mgrid12{
+                float: left;
+            } 
+
+            .mgrid1 {width: 8.33%;}
+            .mgrid2 {width: 16.66%;}
+            .mgrid3 {width: 25%;}
+            .mgrid4 {width: 33.33%;}
+            .mgrid5 {width: 41.66%;}
+            .mgrid6 {width: 50%;}
+            .mgrid7 {width: 58.33%;}
+            .mgrid8 {width: 66.66%;}
+            .mgrid9 {width: 75%;}
+            .mgrid10 {width: 83.33%;}
+            .mgrid11 {width: 91.66%;}
+            .mgrid12 {width: 100%;}
+            .mclear{
+                display: none;
+            }
+            .row{
+                clear: both;
+                overflow: hidden;
+            }
+        }
+        @media screen and (min-width: 768px){ /*.col-lg:px, .col-md:%*/
+            /* pc, 태블릿 */
+            .container{
+                width: 100%;
+            }
+
+            .grid1, .grid2, .grid3, .grid4, 
+            .grid5, .grid6, .grid7, .grid8, 
+            .grid9, .grid10, .grid11, .grid12{
+                float: left;
+            } 
+
+            .grid1 {width: 8.33%;}
+            .grid2 {width: 16.66%;}
+            .grid3 {width: 25%;}
+            .grid4 {width: 33.33%;}
+            .grid5 {width: 41.66%;}
+            .grid6 {width: 50%;}
+            .grid7 {width: 58.33%;}
+            .grid8 {width: 66.66%;}
+            .grid9 {width: 75%;}
+            .grid10 {width: 83.33%;}
+            .grid11 {width: 91.66%;}
+            .grid12 {width: 100%;}
+            .clear{
+                display: none;
+            }
+            .row{
+                clear: both;
+                overflow: hidden;
+            }
+        }
+        
+        
+        .container>img{
+            width: 100%;
+        }
+        ul>li{
+            list-style: none;
+            height: 50px;
+        }
+        ul>li>img{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+   
+    <div class="container mcontainer">
+        <div class="row">
+            <div class="grid12 mgrid12">
+                <img src="imgs/logo.png" alt="logo">
+            </div>
+        </div>
+        <div class="row">
+            <div class="grid3 mgrid12">
+                menu
+                <ul>
+                    <li><a href="#">menu1</a></li>
+                    <li><a href="#">menu2</a></li>
+                    <li><a href="#">menu3</a></li>
+                    <li><a href="#">menu4</a></li>                    
+                </ul>
+            </div>
+            <div class="grid7 mgrid12 content">
+                <h1>환영합니다</h1>
+            </div>
+            <div class="grid2 mclear">
+                aside
+                <ul>
+                    <li><img src="imgs/2016.0721.1.png"alt=""></li>
+                    <li><img src="imgs/logo.png"alt=""></li>
+                    <li><img src="imgs/daum.png"alt=""></li>
+                </ul>
+            </div>            
+            
+        </div>
+        <div class="row">
+            <div class="grid12 mgrid12">
+                footer
+                <address>비트캠프 서울시 서초구 서초동</address>
+            </div>
+        </div>
+    </div> 
+</body>
+</html>

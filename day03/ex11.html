@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <style>
+            div{
+                width: 100px;
+                height: 100px;
+                position: static;
+            }
+            div:nth-child(1){
+                background-color: dodgerblue;
+            }
+            div:nth-child(2){
+                top: 100px;
+                left: 300px;
+                border: solid black 1px;
+                position: relative;
+            }
+            /* 
+                position : fixed 화면 기준 
+                    x축 left : 000px
+                    y축 top : 000px
+                absolute : 부모를 기준으로함
+                relative : 이동을 하게되면 빈자리 남김
+                
+            */
+            div:nth-child(3){
+                background-color: darkolivegreen;
+            }
+            div:nth-child(4){
+                background-color: blueviolet;
+            }
+            div>div{
+                width: 50px;
+                height: 50px;
+                border: solid black 1px;
+            }
+            div>div:nth-child(1){
+                left: -1px;
+                top: -52px;
+                position: absolute;
+            }
+            div>div:nth-child(2){
+                left: -52px;
+                top: 49px;
+                position: absolute;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div>
+            box1
+        </div>
+        <div>
+            box2
+            <div>
+                box2-1
+            </div>
+            <div>
+                box2-2
+            </div>
+        </div>
+        <div>
+            box3
+        </div>
+        <div>
+            box4
+        </div>
+    </body>
+</html>

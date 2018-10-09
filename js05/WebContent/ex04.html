@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<style type="text/css">
+			/* body{
+				padding: 0px;
+				margin: 0px;
+			} */
+			body>div{
+				width: 100px;
+				height: 100px;
+				background-color: yellow;
+			}
+			div>div{
+				display: inline-block;
+				width: 25px;
+				height: 25px;
+				margin-left: 0px;
+				margin-top: 0px;
+				
+			}
+		</style>
+		
+		<script type="text/javascript">
+			window.onload = function(){
+				var div = document.querySelector('div>div');
+				/* div.onclick = function(){
+					console.log('클릭');
+				};
+				div.onmousedown = function(){
+					console.log('마우스 누름');
+				};
+				div.onmouseup = function(){
+					console.log('마우스 뗌');
+				};
+				div.onmouseover = function(){
+					console.log('마우스 오버');
+				};
+				div.onmouseout = function(){
+					console.log('마우스 탈출');
+				}; */
+				div.onclick = function(e){		// e --> JSON
+				/* for(var temp in e){
+					console.log(temp);					
+				} */
+					/* console.log(e.x, e.y);				// body 기준
+					console.log(e.pageX, e.pageY);		// body 기준 (절대)
+					console.log(e.clientX, e.clientY);	// body 기준
+					console.log(e.layerX, e.layerY);	// 모니터 기준 (상대)				
+					console.log(e.offsetX, e.offsetY);	// div 엘리먼트 기준 (상대)
+					console.log(e.screenX, e.screenY);	// 스크린 기준 (상대)
+					console.log('마우스 이동'); */
+					var obj = document.querySelector('div>div');
+					var x = e.x;
+					var y = e.y;
+					obj.style.marginLeft = x+'px';
+					obj.style.marginTop = y+'px';
+				};
+			};
+		</script>
+	</head>
+	<body>
+		<div>
+			<div>◆</div>
+		</div>
+	</body>
+</html>

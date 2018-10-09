@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">
+		var table, xhr, xml, students;
+		
+		function myCallBack(){
+			if(xhr.readyState == 4 && xhr.status == 200){
+				xml = xhr.responseXML;
+				students=xml.children[0].childNodes;
+				table = xml.querySelector('table');
+				msg = "<tr><td>학번</td><td>이름</td><td>국어</td><td>영어</td><td>수학</td></tr>";
+				
+				var students = xml.querySelectorAll('student');
+				var nums = xml.querySelectorAll('num');
+				var names = xml.querySelectorAll('name');
+				var kors = xml.querySelectorAll('kor');
+				var engs = xml.querySelectorAll('eng');
+				var maths = xml.querySelectorAll('math');
+				for(var i=0; i<students.length; i++){
+					msg+="<tr>";
+					msg+="<td>"+nums[i].innerHTML+"</td>";
+					msg+="<td>"+names[i].innerHTML+"</td>";
+					msg+="<td>"+kors[i].innerHTML+"</td>";
+					msg+="<td>"+engs[i].innerHTML+"</td>";
+					msg+="<td>"+maths[i].innerHTML+"</td>";
+					msg+="</tr>";
+					
+				}
+				table.innerHTML = msg;
+			}
+		}
+		
+		function func(){
+			xhr = new XMLHttpRequest();
+			xhr.onreadystatechange = myCallBack;
+			xhr.open('get', './myxml.xml', true);
+			xhr.send();
+		}
+		window.onload = function() {
+			table = document.querySelector("table");
+			func();
+		};
+		
+		</script>
+	</head>
+	<body>
+		<h1>자바스크립트통신 == AJAX 통신</h1>
+		<p>Ajax(Asynchronous JavaScript and XML, 에이잭스)</p>
+	</body>
+</html>

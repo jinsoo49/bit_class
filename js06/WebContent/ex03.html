@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<style type="text/css">
+			section > img {
+				width: 100%;
+			}
+			header{
+				margin: auto;
+			}
+			header > h1{
+				background-image: url("http://bitcamp.co.kr/img/logo.jpg");
+				background-repeat: no-repeat;
+				text-indent: -9999px;
+				height: 103px;
+				margin: auto auto;				
+			}
+			nav{
+				background-color: "#ebebeb";
+				position: relative;
+			}
+			nav > ul > li:nth-child(1){
+				<!--overflow: visible;-->
+			}
+			nav > ul{
+				padding: 0px;
+				width: 600px;
+				margin: 0px auto;
+				font-size: 20px;
+				color: white;
+				font-weight: bold;
+				text-align: center;
+			}
+			nav > ul > li{
+				float : left;
+				list-style: none;
+				width: 148px;
+				height: 30px;
+				background-color: gray;
+				margin: 0px 1px;
+			}
+			nav > ul > li > ul{
+				display: none;
+				padding: 0px;
+				position: relative;			<!-- 최상단 -->				
+			}
+			nav > ul > li > ul > li{
+				list-style: none;
+				border-top: white dotted 3px;
+				
+			}
+			nav > ul > li > ul > li > a{
+				list-style: none;
+				display: block;
+				background-color: #ebebeb;
+				text-decoration: none;
+				color: black;
+				opacity: 0.7;
+			}
+			section {
+				clear: both;
+			}
+			section > img {
+			}
+		</style>
+		<script type="text/javascript">
+		/* nav > ul > li:nth-child(1){
+			overflow: visible;
+		} */
+		
+			var menus, ul, li, overEvent, outEvent;
+			window.onload = function(){
+				menus = document.querySelectorAll('nav>ul>li');
+				overEvent = function (){
+					var ul = this.querySelector('ul');
+					ul.style.display = 'block';
+				};
+				outEvent = function (){
+					var ul = this.querySelector('ul');
+					ul.style.display = 'none';
+				};				
+				for(var i=0; i<menus.length; i++){
+					menus[i].addEventListener('mouseover', overEvent);
+					menus[i].addEventListener('mouseout', outEvent);
+				}
+			};
+		</script>
+	</head>
+	<body>
+		<header>
+			<h1>비트교육센터</h1>
+		</header>
+		<nav>
+			<ul>
+				<li>
+					menu1
+					<ul>
+						<li><a href="#">menu1-1</a></li>
+						<li><a href="#">menu1-2</a></li>
+						<li><a href="#">menu1-3</a></li>
+						<li><a href="#">menu1-4</a></li>
+					</ul>
+				</li>
+				<li>
+					menu2
+					<ul>
+						<li><a href="#">menu2-1</a></li>
+						<li><a href="#">menu2-2</a></li>
+						<li><a href="#">menu2-3</a></li>
+						<li><a href="#">menu2-4</a></li>
+					</ul>
+				</li>
+				<li>
+					menu3
+					<ul>
+						<li><a href="#">menu3-1</a></li>
+						<li><a href="#">menu3-2</a></li>
+						<li><a href="#">menu3-3</a></li>
+						<li><a href="#">menu3-4</a></li>
+					</ul>
+				</li>
+				<li>
+					menu4
+					<ul>
+						<li><a href="#">menu4-1</a></li>
+						<li><a href="#">menu4-2</a></li>
+						<li><a href="#">menu4-3</a></li>
+						<li><a href="#">menu4-4</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+		<section>
+			<h1>환영합니다</h1>
+			<img src="http://bitcamp.co.kr/slider/2.png" alt="메인 이미지 들어갈곳"/>
+		</section>
+		<footer>
+			Copyright (c) 비트캠프 All rights reserved.
+		</footer>
+	</body>
+</html>

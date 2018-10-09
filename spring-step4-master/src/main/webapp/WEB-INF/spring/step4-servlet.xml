@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--<bean id="dataSource" class="org.apache.tomcat.dbcp.dbcp.BasicDataSource">-->
+        <!--<property name="driverClassName" value="com.mysql.cj.jdbc.Driver"/>-->
+        <!--<property name="url" value="jdbc:mysql://localhost:3306/mydb?serverTimezone=UTC"/>-->
+        <!--<property name="username" value="root"/>-->
+        <!--<property name="password" value="password"/>-->
+    <!--</bean>-->
+
+
+
+    <!--#2 dao의 생성자를 통한 주입-->
+    <!--<bean id="guestDao" class="com.bit.spring06.model.GuestDao02Imf">-->
+        <!--<constructor-arg ref="dataSource"/>-->
+    <!--</bean>-->
+
+    <!--#1 dao의 datasource setter 이용-->
+    <!--<bean id="guestDao" class="com.bit.spring06.model.GuestDao01Imf">-->
+        <!--<property name="dataSource" ref="dataSource"/>-->
+    <!--</bean>-->
+    <bean id="handlerMapping" class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"/>
+    <bean name="/index.bit" class="com.bit.spring06.controller.DefaultController" p:viewName="index"/>
+    <bean name="/list.bit" class="com.bit.spring06.controller.ListController" p:guestDao-ref="guestDao"/>
+
+    <bean name="/detail.bit" class="com.bit.spring06.controller.BeanController" p:guestDao-ref="guestDao" p:viewName="detail"/>
+    <bean name="/edit.bit" class="com.bit.spring06.controller.BeanController" p:guestDao-ref="guestDao" p:viewName="edit"/>
+
+    <bean name="/update.bit" class="com.bit.spring06.controller.EditController" p:guestDao-ref="guestDao"
+          p:supportedMethods="POST" p:commandClass="com.bit.spring06.model.entity.GuestVo" p:commandName="bean"/>
+
+    <bean name="/delete.bit" class="com.bit.spring06.controller.DelController" p:supportedMethods="POST" />
+
+    <bean name="/add.bit" class="com.bit.spring06.controller.DefaultController" p:viewName="add"/>
+    <bean name="/insert.bit" class="com.bit.spring06.controller.AddController" p:guestDao-ref="guestDao"
+          p:commandClass="com.bit.spring06.model.entity.GuestVo" p:commandName="bean" p:supportedMethods="POST"/>
+
+    <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/view/"/>
+        <property name="suffix" value=".jsp"/>
+    </bean>
+    <bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"/>
+</beans>

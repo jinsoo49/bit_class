@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<style type="text/css">
+			div>div{
+				width: 200px;
+				height: 200px;
+				border: solid black 1px;
+			}
+		</style>
+		<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+		<script type="text/javascript">
+			function start(){
+				console.log("시작");
+			};
+			
+			$(window).load(function(){
+				
+			});
+		
+		
+			// 아래 둘은 동일시점임
+			$(document).ready(function(){
+				console.log("문서 구조 완성시점");
+			});
+				
+			$(function myOpen(){
+				console.log('로딩완료');
+				$('button').click(function(){
+					alert('클릭');
+				});
+			});
+		</script>		
+	</head>
+	<body>
+		<h1>jq 이벤트</h1>	
+		<input type="text"/>
+		<button>버튼</button>
+		<div>
+			<div></div>
+		</div>
+		<a href="ex04.html"></a>
+		<iframe width="800px" height="800px" src="ex04.html"></iframe>
+	</body>
+</html>

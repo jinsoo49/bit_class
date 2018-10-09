@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">
+		var msg='java';
+		</script>
+		<script type="text/javascript">
+		//자료형
+		//자료의 타입을 확인할때 - typeOf 자료 / 타입 비교 - a === 100
+		//1. 숫자타입(정수, 실수) Number타입
+		//2. 문자열타입 String '' or ""
+		//3. 논리형 타입(true, false) boolean 타입
+		//4. 배열[]타입 array타입
+		//5. 오브젝트타입({}, JSON) object타입 >>> 최상위
+		//6. null타입(null)
+		//7. 초기화없음 undefined -------> null이 아님
+		//8. function 타입
+		
+		//함수와 메서드 --> 메서드는 객체를 통하여 접근함
+			var a=5;
+			alert(a/2);		// = 2.5 javascript 특성상 연산에 약함		
+			
+			function func1(){
+				alert('만들기');
+			}
+			var func2=function(){
+				alert('만든거');
+			}
+			func2();
+			
+			//자동으로 언랩핑을 하게되어 true
+			if(a-1==1){
+				alert('같다');
+			}else{
+				alert('다르다');
+			}
+			if(msg == 'java'){
+				alert('같다');
+			}else{
+				alert('다르다');
+			}
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

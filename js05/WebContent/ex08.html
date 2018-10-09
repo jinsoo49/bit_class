@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">
+			var a, form;
+			window.onload = function (){
+				a = document.querySelector('a');
+				form = document.querySelector('form');
+				strong = document.querySelector('strong');
+				strong.onclick = function(){
+					window.location.replace('ex07.html');
+				};
+				a.onclick = function (){
+					e.preventDefault();					// return false와 같이 페이지 이동x ---> 엘리먼트의 기본 기능 취소
+					alert('alink click');
+					//return false;
+				};
+				form.onsubmit = function(e) {
+					e.preventDefault();
+					console.log(this.querySelector('input').value);
+				};
+			};
+		</script>
+	</head>
+	<body>
+		<h1>html의 기능을 갖는 태그</h1>
+		<p>대표적으로 <strong>아래의</strong> 두 태그</p>
+		<a href="ex07.html" onclick="return func();">link</a>
+		<form action="ex07.html">
+			<input type="text" name="id">
+			<button type="submit">전송</button>
+		</form>
+	</body>
+</html>

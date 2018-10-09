@@ -1,0 +1,36 @@
+<!Doctype html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <style>
+/*      
+        관계
+        +다음형제
+        >자식
+         자손(자식, 자식>자식, 자식>...)
+        ~다음형제들
+        ,지시자 다중선택
+*/
+        body>p~div>h2{
+            color : red;
+        }
+        </style>
+    </head>
+    <body>
+        <h1>엘리먼트 접근</h1>
+        <h2>제목1</h2>
+        <p>내용1</p>
+        <div>
+            <h2>제목2</h2>
+            <p>내용2</p>
+        </div>
+        <div>
+            <h2>제목3</h2>
+            <p>내용3</p>
+            <div>
+                <h2>제목4</h2>
+                <p>내용4</p>
+            </div>
+        </div>
+    </body>
+</html>

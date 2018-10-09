@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <style>
+            div{
+                width: 100px;
+                height: 100px;
+                position: relative;
+                background-color: red;
+                animation-name: ani2;
+                animation-duration: 5s;
+                animation-iteration-count: infinite;
+            }
+            @keyframes ani2{
+                0%{
+                    top: 0px;
+                    left: 0px;
+                }
+                25%{
+                    top: 100px;
+                    left: 300px;
+                }
+                50%{
+                    top: 400px;
+                    left: 400px;
+                }
+                100%{
+                    top: 0px;
+                    left: 0px;
+                }
+            }
+            div:hover{
+                animation-play-state: paused;
+            }
+            @keyframes ani1{
+                from{
+                    margin-left: 0px;
+                }
+                to{
+                    margin-left: 500px;
+                    margin-top: 500px;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <div>
+        
+        </div>
+    </body>
+</html>

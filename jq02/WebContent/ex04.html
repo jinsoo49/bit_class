@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+		<script type="text/javascript">
+			window.onload = function(){
+				/* //select의 아이템 추가
+				/* $('select').html($('select').html()+"<option>item1</option>");
+				$('select').html($('select').html()+"<option>item2</option>");
+				$('select').html($('select').html()+"<option>item3</option>");
+				$('select').html($('select').html()+"<option>item4</option>");
+				$('select').html($('select').html()+"<option>item5</option>");
+				
+				var ele;
+				ele = $('<option>edit1</option>'); */
+				
+				/* var arr = [];
+				arr.push($('<option>edit1</option>'));
+				$('select').html(arr);
+				arr.push($('<option>edit2</option>'));
+				$('select').html(arr);
+				arr.push($('<option>edit3</option>'));
+				$('select').html(arr);
+				arr.push($('<option>edit4</option>'));
+				$('select').html(arr); */
+				
+				/* var item3 = $('<li>item3</il>');
+				$('li').last().append(item3);				
+				var item4 = $('<li>item4</il>');
+				$('li').last().append(item4);			 */	
+				
+				/* var additem = $('<li>add</li>')
+				$('ul').children().first().append(additem);
+				
+				$('p').append('<p>추가되는 문자열</p>'); 
+				
+				$('<option>item1</option>').appendTo($('select'));
+				$('<li>item3</li>').appendTo('ul');
+				
+				// 아래 두개는 서로 다른 퍼포먼스임
+				$('ul').appendTo('p');
+				$('ul').appendTo($('p'));
+				
+				$('p').after('p태그 다음에 들어감');		// <p> 다음에 들어감				
+				$('li').last().after("<li>li의 가장 마지막 다음에 들어감</li>");
+				$('li').after("<li>모든 li 앞에 추가</li>");
+				$('li').before("<li>모든 li 뒤에 추가</li>");
+				$('ul').append('<li>append의 특징 - 자식요소 가장 나중에 추가됨 </li>');
+				$('ul').prepend('<li>prepend의 특징 - 자식요소 가장 앞에 추가됨 </li>');
+				*/
+				
+				//--------------------------------------------------------------------------------
+				
+				$('ul').append(function(idx, msg){
+					console.log(idx, msg);
+				});
+				
+				$('<li>---insertBefore</li>').insertBefore(".cl01");
+				$('<li>---insertAfter</li>').insertAfter(".cl01");							
+				
+				$('li').last().remove();
+			};
+		</script>
+	</head>
+	<body>
+		<h1>노드 추가제어</h1>
+		<p>노드의 추가제거</p>
+		<ul>
+			<li class="cl01">item1</li>
+			<li>item2</li>
+		</ul>
+		<form>
+			<select>
+			
+			</select>
+		</form>
+	</body>
+</html>

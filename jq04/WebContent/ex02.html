@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<style type="text/css">
+			header, nav, section, footer{
+				margin: 0px auto;
+				width: 900px;
+			}
+			header>h2{
+				height: 95px;
+				background-image: url("imgs/logo.png");
+				background-repeat: no-repeat;
+				text-indent: -9999px
+			}			
+			nav{
+				background-color: black;
+				overflow: hidden;
+			}
+			nav>ul{				
+				color: white;
+				padding: 0px;
+				width: 490px;
+				margin: 0px auto;
+			}
+			nav>ul>li{
+				float: left;
+				list-style: none;
+				margin: 0px 1px;
+			}			
+			nav>ul>li>a{
+				display: block;
+				width: 120px;
+				text-decoration: none;
+				color: white;
+				text-align: center;
+				background-color: rgb(200, 200, 200, 0.4);
+				font-size: 16pt;
+				font-weight: bold;
+			}			
+			nav>ul>li>ol{
+				padding: 0px;
+				display: none;
+				position: absolute;
+			}
+			nav>ul>li>ol>li{
+				list-style: none;
+			}
+			nav>ul>li>ol>li>a{
+				display: block;
+				width: 120px;
+				text-decoration: none;
+				color: white;
+				text-align: center;
+				background-color: rgb(0, 0, 0, 0.2);
+				font-size: 16pt;
+				font-weight: bold;
+			}
+			section{
+				clear: both;
+			}
+			
+			section>div{
+				width: 136px;
+				overflow: hidden;
+			}
+			section>div>ul{
+				width: 816px;
+				padding: 0px;
+			}
+			section>div>ul>li{
+				list-style: none;
+				float: left;
+			}
+			section>div>ul>li>a{
+				background-color: red;
+				display: inline-block;
+				width: 30px;
+				height: 30px;
+				border-radius:15px;
+			}
+			section>div>ul>li>img{
+				
+			}
+			footer{
+				clear: both;
+			}
+		</style>
+		<script type="text/javascript" src="js/jquery-ui.js"></script>
+		<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+		<script type="text/javascript">
+			var x=0;
+			var y=0;
+			var cnt=0;
+			$(document).ready(function(){
+				$('nav>ul>li').mouseenter(function(){
+					$(this).children().last().clearQueue().stop().slideDown(500);
+				}).mouseleave(function(){
+					$(this).children().last().clearQueue().stop().slideUp(500);					
+				});	
+				
+				$('nav>ul>li>ol>li>a').mouseenter(function(){
+					$(this).css('color','red');
+				}).mouseleave(function(){
+					$(this).css('color','white');
+				});
+				$('section>div>button').each(function(idx, ele){
+					$(ele).click(function(){
+						if(idx == 1){
+							if(cnt < 6-1){
+								cnt++;
+							}
+							x = cnt*136;
+							$(ele).prev().prev().animate({'margin-left':'-'+x+'px'}, 1000);
+						}
+						if(idx == 0){
+							cnt--;
+							if(cnt == 0){
+								cnt = 5;
+							}
+							x = cnt*136;
+							$(ele).prev().animate({'margin-left':'-'+x+'px'}, 1000);
+						}
+					});
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<header>
+			<h2>비트교육센터</h2>
+		</header>
+		<div>
+			<nav>
+				<ul>
+					<li><a href="#" >menu1</a>
+						<ol>
+							<li><a href="#" >menu1-1</a></li>
+							<li><a href="#" >menu1-2</a></li>
+							<li><a href="#" >menu1-3</a></li>
+						</ol>
+					</li>
+					<li><a href="#">menu2</a>
+						<ol>
+							<li><a href="#">menu2-1</a></li>
+							<li><a href="#">menu2-2</a></li>
+							<li><a href="#">menu2-3</a></li>
+							<li><a href="#">menu2-4</a></li>
+						</ol>
+					</li>
+					<li><a href="#">menu3</a>
+						<ol>
+							<li><a href="#">menu3-1</a></li>
+							<li><a href="#">menu3-2</a></li>
+							<li><a href="#">menu3-3</a></li>
+							<li><a href="#">menu3-4</a></li>
+						</ol>
+					</li>
+					<li><a href="#">menu4</a>
+						<ol>
+							<li><a href="#">menu4-1</a></li>
+							<li><a href="#">menu4-2</a></li>
+						</ol>
+					</li>
+				</ul>
+			</nav>
+		</div>
+		<section>
+			<div>
+			<ul>
+				<li><img src="imgs/img01.jpg"></li>
+				<li><img src="imgs/img02.jpg"></li>
+				<li><img src="imgs/img03.jpg"></li>
+				<li><img src="imgs/img04.jpg"></li>
+				<li><img src="imgs/img05.jpg"></li>
+				<li><img src="imgs/img06.jpg"></li>
+			</ul>
+			<button>prev</button>
+			<button>next</button>
+			</div>
+		</section>
+		<footer>
+			<address>
+				서초구 서초동 1327-15 비트아카데미빌딩
+			</address>
+			copyright
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+		<script type="text/javascript">
+		
+		window.onload = function(){
+			$('li:nth-child(2n)').css('color', '#cccccc');			
+			$('div div').css('color', 'red');			
+            $('div').css('color', '#ebebeb');
+            $('p+h2').css('color', '#ebebeb');
+            // 엘리먼트+ : 바로 다음
+		};
+		</script>
+	</head>
+	<body>
+		<h1>dom 제어</h1>
+		<p>내용</p>	
+		<h2>h2 태그1</h2>
+		<p class="cl1">내용</p>	
+		<h2>h2 태그2</h2>
+		<p id="id01">내용</p>	
+		<h2 class="cl2">h2 태그3</h2>
+		<p>내용</p>	
+		<h2>h2 태그4</h2>
+		<p class="cl1">내용</p>
+		<div>
+            1111
+		    <div>
+                2222
+		        <div>
+                    3333
+		            <div>4444</div>
+		        </div>
+		    </div>
+		</div>
+		<ul>
+			<li>item1</li>
+			<li class="cl2">item2</li>
+			<li class="cl2">item3</li>
+			<li>item4</li>
+		</ul>	
+	</body>
+</html>

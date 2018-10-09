@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+	</head>
+	<body>
+		<div>		
+			<img src="img/img01.jpg">
+			<img src="img/img02.jpg">
+			<img src="img/img03.jpg">
+		</div>
+		<script type="text/javascript">
+		
+		var arr=['img01.jpg', 'img02.jpg', 'img03.jpg', 'img04.jpg', 'img05.jpg', 'img06.jpg'];		
+		
+		function imgLoop2(){
+			var name=arr.shift();
+			arr.push(name);
+			var img1=document.querySelector('div');
+			img1.innerHTML='<img src="img/'+arr[1]+'"/>'+'<img src="img/'+arr[2]+'"/>'+'<img src="img/'+arr[3]+'"/>';				
+		}
+		
+		setInterval(imgLoop2, 1000);
+		</script>
+		
+		
+		<!-- <script type="text/javascript">
+			var su=1;
+			function imgLoop(){
+				su++;
+				if(su>6)su=1;
+				var img = document.querySelector('img');
+				img.src = 'img/img0'+su+'.jpg';
+			}
+			setInterval(imgLoop, 1000);
+		</script> -->
+	</body>
+</html>

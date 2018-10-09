@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+		<script type="text/javascript">
+			window.onload = function(){
+				var ele = document.querySelector('form');
+				$(ele).css('background-color', '#ebebeb');
+				$('p:first-child').children().css('background-color', '#000000');
+				$('p:first-child').children().first().next().parent().next().first().css('background-color', '#FFFFFF');
+				$('p:first-child').css('background-color', 'aqua');
+				$('label:nth-child(1)').css('background-color', 'red');
+				$('label:nth-child(1)').next().next().next().css('background-color', 'yellow');
+				
+				// 중간에 있는 <p>값을 선택하고 싶을때
+				$('form').children().eq(1).css('background-color', 'red');
+				$('form').children().eq(1).css('background-color', 'red').next().next().css('border', 'solid 1px black');
+				
+				
+				var arr = $('p');
+				var color = ['#000000', '#000000', '#000000', '#000000', '#000000', '#000000']
+				for(var i=0; i<arr.length; i++){
+					$(arr[i]).css('background-color', '#'+(i+2)+(i+2)+'0000');
+				}
+				
+				$('p').each(function(){
+					
+					//엘리먼트 갯수만큼 실행
+					$(this).css('border', 'white dotted 5px');
+				});
+				
+			};
+		</script>
+	</head>
+	<body>
+		<h1>jQuery node 방식 접근</h1>
+		<form action=""	>
+			<p><label for="id">id</label>
+			<input type="text" name="id" id="id"></p>
+			<p><label for="pw">pw</label>
+			<input type="text" name="pw" id="pw"></p>
+			<p><input type="radio" name="ra" id="ra1">
+			<label for="ra1">ra1</label>
+			<input type="radio" name="ra" id="ra2">
+			<label for="ra2">ra2</label></p>
+			<p><input type="checkbox" name="ch1" id="ch1">
+			<label for="ch1">ch1</label>
+			<input type="checkbox" name="ch2" id="ch2">
+			<label for="ch2">ch2</label></p>
+			<p>
+			<select>
+				<option>item1</option>
+				<option>item2</option>
+				<option>item3</option>
+				<option>item4</option>
+			</select>
+			</p>
+			<p>
+			<button type="submit">submit</button>
+			<button type="reset">reset</button>
+			</p>
+		</form>
+	</body>
+</html>

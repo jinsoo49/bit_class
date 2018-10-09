@@ -1,0 +1,36 @@
+<!Doctype html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <style>
+/*            id지시자로 스타일 삽입시에는 id 앞에 # 필요*/
+            #itm4{
+                color: blue;
+            }
+/*            class 지시자는 id앞에 . 필요*/
+            .itm6{
+                color: red;
+            }
+            
+/*
+            지시자
+                1. 태그지시자 : 태그명
+                2. 클래스지시자 : .클래스명(중복허용)
+                3. 아이디지시자 : #아이디명(중복불가)
+*/
+        </style>
+    </head>
+    <body>
+        <h1>지시자</h1>
+        <ul>
+            <li>item1</li>
+            <li>item2</li>
+            <li>item3</li>
+            <li id="itm4">item4</li>
+            <li>item5</li>
+            <li class = "itm6">item6</li>
+            <li>item7</li>        
+        </ul>
+        <p>id속성 부여값은 문서에서 유일</p>
+    </body>
+</html>

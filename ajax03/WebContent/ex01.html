@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				// $('#target').load('ex02.html');
+				
+				// jQuery.ajax(url, setting-json);
+				$.ajax('ex15.json?callback=?', {
+				asyne: true,
+				type: 'GET',
+			//	data: [{name: 'id', value: 'root'}, {name : "pw", value:"abcd"}],//'id=admin&pw=1234',	
+					
+					/* complete:function(xhr, txt){
+						console.log(xhr.readyState, xhr.status, txt);	// 4, 200, success or error
+						
+						if(txt == 'success'){
+							var h1 = xhr.responseText;							
+							$('#target').html(h1);							
+						}
+					} */
+				error:function(jqXHR, status, error){			// (jqXHR jqXHR, String textStatus, String errorThrown)
+					console.log(jqXHR);					
+					console.log(status);					
+					console.log(error);					
+				},
+				datatype: "jsonp",
+				//jsonpCallback: "myCallback",
+				success:function(data, status, xhr){			// (Anything data, String textStatus, jqXHR jqXHR) 
+					console.log(data);
+					console.log(typeof data);		// 헤더 정보에 따라 결정됨
+					console.log(status);
+					console.log(xhr);
+					
+					var msg = $(data).filter('h1').html();
+					$('#target').html(msg);
+					
+					$('#target').html("<h2>"+data.root[1].num+"</h2>");
+					$('#target').append("<h2>"+data.root[1].name+"</h2>");
+				}
+				
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<h1>ajax 통신</h1>
+		<div id="target"></div>
+		<p>불러오기 완료</p>
+	</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @media screen and (min-width: 1024px){
+             header, nav, setion, aside, footer{
+                display: block;
+            }
+            header{
+            }
+            header>h1{            
+                height: 95px;
+                background-image: url(imgs/logo.png);
+                background-repeat: no-repeat;
+                text-indent: -9999px;
+            }
+            nav{
+                background-color: #cccccc;
+                overflow: hidden;                 
+            }
+            nav>ul{
+                width: 520px;
+                margin: auto;
+            }
+            section{
+                clear: both;
+                width: 70%;
+                float: left;
+            }
+            nav>ul>li{
+                float: left;
+                background-color: #ebebeb;
+                list-style: none;
+                width: 100px;
+                margin: 0px 5px;            
+            }
+            nav>ul>li>a:link, nav>ul>li>a:visited{
+                font-size: 16pt;
+                font-weight: bold;
+                display: block;
+                text-decoration: none;
+                color: black;
+                height: 40px;
+                text-align: center;
+                line-height: 35px;
+            }
+            nav>ul>li>a:hover, nav>ul>li>a:active{
+                background-color: dimgrey;
+                color: beige;
+                font-weight: inherit;
+            }
+            section{
+                clear: both;
+            }
+            aside{
+                width: 30%;
+                float: left;
+            }
+            aside>a{
+                background-color: aliceblue;
+                display: block;
+                height: 50px;
+                width: 100px;
+                text-decoration: none;
+                color: black;
+                font-weight: bold;
+                text-align: center;
+                line-height: 40px;
+
+            }
+            footer{
+                clear: both;
+                background-color: gray;
+            }
+        }
+        @media screen and (max-width: 1023px){
+            header, nav, setion, aside, footer{
+                display: block;
+            }
+            header{
+            }
+            header>h1{            
+                height: 95px;
+                background-image: url(imgs/logo.png);
+                background-repeat: no-repeat;
+                text-indent: -9999px;
+            }
+            nav{
+                background-color: #cccccc;
+                overflow: hidden;                 
+            }
+            nav>ul{
+                width: 300px;
+                margin: auto;
+            }
+            section{
+                clear: both;
+                width: 70%;
+                float: left;
+            }
+            nav>ul>li{
+                float: left;
+                background-color: #ebebeb;
+                list-style: none;
+                width: 200px;
+                margin: 0px 5px;            
+            }
+            nav>ul>li>a:link, nav>ul>li>a:visited{
+                font-size: 16pt;
+                font-weight: bold;
+                display: block;
+                text-decoration: none;
+                color: black;
+                height: 40px;
+                text-align: center;
+                line-height: 35px;
+            }
+            nav>ul>li>a:hover, nav>ul>li>a:active{
+                background-color: dimgrey;
+                color: beige;
+                font-weight: inherit;
+            }
+            section{
+                clear: both;
+            }
+            aside{
+                visibility: hidden;
+            }
+            footer{
+                clear: both;
+                background-color: gray;
+            }            
+        }
+        @media screen and (min-width: 1600px;){
+            
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>비트캠프</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">menu1</a></li>
+            <li><a href="#">menu2</a></li>
+            <li><a href="#">menu3</a></li>
+            <li><a href="#">menu4</a></li>
+            <div>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </ul>
+    </nav>
+    <section>
+        <h1>반응형 웹이란</h1>
+        <img src="imgs/html5.png" alt="main">
+        <p>HTML5는 HTML의 완전한 5번째 버전으로 월드 와이드 웹 (World Wide Web)의 핵심 마크업 언어이다. 2004년 7월 Web Hypertext Application Technology Working Group(WHATWG)에서 웹 애플리케이션 1.0이라는 이름으로 세부 명세 작업을 시작하였다.
+        HTML5는 HTML 4.01, XHTML 1.0, DOM 레벨 2 HTML에 대한 차기 표준 제안이다. 비디오, 오디오 등 다양한 부가기능과 최신 멀티미디어 콘텐츠를 액티브X 없이 브라우저에서 쉽게 볼 수 있게 하는 것을 목적으로 한다.
+        W3C는 2014년 10월 28일 HTML5 표준안을 확정했다고 발표했다.
+        이후 2016년 11월 1일 HTML5의 마이너 업데이트 버전인 HTML5.1 표준안을 확정, 2017년 12월 14일 HTML5.2 표준안을 확정했다. HTML5.3 표준안은 현제 작업 초안 단계로 진행 중이다.</p>
+    </section>
+    <aside>
+        <a href="http://naver.com">naver</a>
+        <a href="http://daum.net">daum</a>
+        <a href="http://google.com">google</a>
+    </aside>
+    <footer>
+        <address>
+            비트캠프 서울시 서초구 서초동 1327-15
+        </address>
+    </footer>
+</body>
+</html>

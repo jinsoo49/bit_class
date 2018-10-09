@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+	</head>
+	<script type="text/javascript">
+		var div, msg, cnt;
+		// 비동기통신
+		window.onload = function (){
+			msg = '초기값';
+			div = document.querySelector('div');
+			cnt = 0;
+			
+			var xhr = new XMLHttpRequest();
+			xhr.onreadystatechange = function() {
+				/*
+				
+				통신 상태(단계)
+				Holds the status of the XMLHttpRequest.
+				0: request not initialized 전 시점
+				1: server connection established 서버 접속시점
+				2: request received  받을 시점
+				3: processing request 처리 시점
+				4: request finished and response is ready 응답이 준비됐을때
+				
+				------------------------------------------------------------
+				
+				통신결과 status
+				200: 정상
+				4xx: 문서없음, 404:없는페이지 405:메서드 오류
+				5xx: 문서존재, 문법에러(500), 501, 502, ~~~
+				
+				*/
+				if(xhr.readyState == 4 && xhr.status == 200){
+					msg = xhr.responseText;				
+					div.innerHTML = msg;
+				}else{
+					div.innerText = '오류:재시도 바람';
+					alert('오류 : 재시도 바람');
+				}
+			};
+			// method(get or post), url, [동기(false) | 비동기(true)]
+			xhr.open('get', './ex04.html', false);	
+			xhr.send();
+		};
+		
+			
+			
+	</script>
+	<body>
+		<h1>ex03 page</h1>
+		<p>비동기 통신으로 아래를 가져옵니다.</p>
+		<div></div>
+		<p>이렇게 가져왔습니다.</p>
+	</body>
+</html>

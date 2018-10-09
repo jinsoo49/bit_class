@@ -1,0 +1,149 @@
+@CHARSET "UTF-8";
+			
+			.container{
+				width: 1200px;
+				height: 698px;
+			}
+			
+			.menuBar{
+				width: 230px;
+				height: 698px;
+				background-color: #968973;
+				float: left;
+			}
+			
+			a{
+				text-decoration: none;	
+				color: black;			
+			}
+			
+			#menu{
+				width: 230px;
+				height: 68px;				
+				font-size: 22px;
+				font-weight: bold;				
+				text-align: center;
+				display: inline-block;
+				color: white;
+			}
+			#menu>a, #menu>div>a{
+				color: white;
+				display: block;
+			}
+			
+			.logo{
+				width: 228px;
+				height: 82px;
+			}
+			
+			.main{
+				width: 970px;
+				height: 698px;
+				float: right;
+			}		
+			
+			.top{
+				width: 970px;
+				height: 52px;
+				border-bottom: 1px solid gray;
+				float: right;
+			}
+			.login{
+				width: 390px;
+				height: 52px;
+				float: right;
+				line-height: 50px;
+			}
+			.memberLogin{
+				background-color: #C4D2E3;
+				border: 1px solid gray;
+				border-radius: 6px;
+				width: 70px;
+				height: 30px;
+				font-weight: bold;
+				outline: 0px;
+			}
+			.id, .pw{
+				padding:8px;
+				border:none;
+				border-bottom:1px solid #ccc;
+				width: 80px;
+			}
+			
+			.main{
+				width: 970px;
+				height: 532px;
+				float: right;
+			}
+			.footer{
+				width: 970px;
+				height: 112px;
+				border-top: 1px solid gray;
+				float: right;
+			}
+			.footer>img{
+				margin-left: 50px;
+				margin-top: 10px;
+				float: left;
+			}
+			.footer>p{
+				margin-left: 15px;
+				float: left;
+				margin-bottom: 0px;
+				margin-top: 10px;
+			}
+			.bit{
+				position: absolute;
+				left: 238px;	
+				top: 220px;
+				width: 180px;
+				height: 180px;
+				background-color: #E3D8C4;
+				display: none;	
+			}
+			
+			.bit>div, .cla>div{
+				width: 180px;
+				height: 30px;
+				background: rgba(0, 0, 0, 0);
+				font-size: 17px;
+				vertical-align: middle;
+			}
+			.bit>div>a{
+				display: block;
+			}
+			.bitintro{
+				margin-top: 17px;			
+			}
+			
+			.bitnavi, .bittea, .bitcla{
+				margin-top: 10px;
+			}
+			
+			
+			.cla{
+				position: absolute;
+				left: 238px;	
+				top: 280px;
+				width: 180px;
+				height: 180px;
+				background-color: #E3D8C4;
+				display: none;	
+			}
+			.cla>div>a{
+				display: block;
+			}
+			.clajava{
+				margin-top: 17px;			
+			}
+			
+			.clac, .clabig, .claand{
+				margin-top: 10px;
+			}
+			
+			.mainbutton, .clabutton, .bitbutton, .membutton, .advice{
+				width: 230px;
+				height: 50px;
+				background: rgba(255, 255, 255, 0);
+				line-height: 45px;
+			}

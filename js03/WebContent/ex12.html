@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">
+			// v8 - 단일스레드
+			// 내장함수
+			// alert('메세지창을 띄운다');
+			
+			// var su = prompt("입력창", "1234");					// 입력가능한 팝업
+			// console.log(su);
+			
+			// var su = confirm("이동하시겠습니까?");				// 예or아니오 ---> result는 boolean타입
+			// console.log(su);
+			
+			//function func(){
+			//	console.log('ok....'+cnt);
+			//	cnt++;
+			//	if(cnt<=10)setTimeout(func,1000);					// 콜백
+			//}
+			//var cnt = 0;
+			//func();
+			
+		var cnt=0;	
+		
+		function stop(){
+			clearInterval(mod);
+		}
+		var mod = setInterval(function() {							// 변수를 받아서 사용해야 clear 가능
+			console.log(new Date());			
+		}, 1000);
+			
+			
+		</script>
+	</head>
+	<body>
+		<button onclick="stop();">stop</button>
+	</body>
+</html>

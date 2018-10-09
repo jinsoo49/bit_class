@@ -1,0 +1,22 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="sts02:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/sts02_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="sts02/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="sts02" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Spring-4.3.18.RELEASE" />
+          <element id="library" level="project" name="Spring MVC-4.3.18.RELEASE" />
+          <element id="library" level="project" name="Maven: javax.servlet:javax.servlet-api:4.0.0" />
+          <element id="library" level="project" name="Maven: javax.servlet:jstl:1.2" />
+          <element id="library" level="project" name="Maven: org.apache.tomcat:tomcat-dbcp:7.0.79" />
+          <element id="library" level="project" name="Maven: taglibs:standard:1.1.2" />
+          <element id="library" level="project" name="ojdbc6" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

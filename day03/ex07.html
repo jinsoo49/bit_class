@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <style>
+            div{
+                width: 350px;
+                height: 350px;
+            }
+            div>div{
+                width: 130px;
+                height: 130px;
+                margin: 2px;
+                border: 0px solid black;
+                float: left;
+                background-image:url(imgs/logo.png);
+                background-attachment: fixed; /* 이미지 고정 */
+            }
+            div>div:first-child{
+                background-color: #cccccc;
+                border-top-left-radius: 150px;
+            }
+            div>div:first-child+div{
+                background-color: #aaaaaa;
+                border-top-right-radius: 150px;
+            }
+            div>div:first-child+div+div{
+                background-color: #999999;
+                border-bottom-left-radius: 150px;
+            }
+            div>div:first-child+div+div+div{
+                background-color: #666666;
+                border-bottom-right-radius: 150px;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </body>
+</html>

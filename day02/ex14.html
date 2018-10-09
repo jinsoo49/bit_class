@@ -1,0 +1,86 @@
+<!Doctype html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <style>
+            header, nav, section, aside, footer{
+                display: block;
+                border: black solid 1px;
+            }
+            nav{
+                background-color: gainsboro;
+                height: 100px;
+            }
+            section, aside{
+                float: left;
+            }
+            footer{
+                clear: left;
+            }
+            section{
+                width: 65%;
+            }
+            aside{
+                width: 30%;
+            }
+            nav>ul{
+                width: 650px;
+                padding: 0px;
+                height: 30px;
+                margin: auto;
+            }
+            nav>ul>li:first-child{
+                border-left: gainsboro solid 5px;
+            }
+            nav>ul>li{
+                float: left;
+                background-color: gray;
+                width: 150px;
+                height: 100px;
+                list-style: none;
+                font-size: 20px;
+                font-weight: bold;    
+                margin-right: 3px;
+            }
+            nav>ul>li>a{
+                display: block;
+                width: 150px;
+                height: 100px;
+                text-decoration: none;
+                color: white;
+                font-weight: bold;
+                text-align: center;
+                font-size: 40px;
+                line-height: 100px;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <header>
+            <img alt="logo" src="imgs/logo.png"/>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="ex01.html">menu1</a></li>
+                <li><a href="ex02.html">menu2</a></li>
+                <li><a href="ex03.html">menu3</a></li>
+                <li><a href="ex04.html">menu4</a></li>
+            </ul>
+        </nav>
+        <section>
+            <img alt="main" src="imgs/online.png"/>
+            <h1>환영합니다</h1>
+        </section>
+        <aside>
+            <img alt="이;미지이ㅈㄴㅇㄹㄴㅁ아ㅣㄹㄴ어라ㅣㄴㅇ1" src="">
+            <img alt="이;미지이ㅈㄴㅇㄹㄴㅁ아ㅣㄹㄴ어라ㅣㄴㅇ2" src="">
+            <img alt="이;미지이ㅈㄴㅇㄹㄴㅁ아ㅣㄹㄴ어라ㅣㄴㅇ3" src="">
+        </aside>
+        <footer>
+            <cite>cite 실제 주소</cite>
+            <address>address 웹의 주소</address>
+            카피라이트
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<students>
+	<student>
+		<num>1</num>
+		<name>user1</name>
+		<kor>90</kor>
+		<eng>80</eng>
+		<math>70</math>
+	</student>
+	<student ban="jjang">
+		<num value="2"/>
+		<name value="user2"/>
+		<kor value="80"/>
+		<eng value="50"/>
+		<math value="60"/>
+	</student>
+	<student>
+		<num>3</num>
+		<name>user3</name>
+		<kor>20</kor>
+		<eng>30</eng>
+		<math>40</math>
+	</student>
+	<student>
+		<num>4</num>
+		<name>user4</name>
+		<kor>70</kor>
+		<eng>60</eng>
+		<math>10</math>
+	</student>
+</students>
+

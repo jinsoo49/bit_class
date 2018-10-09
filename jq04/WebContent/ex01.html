@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<style type="text/css">
+			#target{
+				width: 100px;
+				height: 100px;
+				background-color: blue;
+				position: relative;
+			}
+			div{
+				width: 100px;
+				height: 100px;
+				background-color: red;
+			}
+		</style>
+		<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+		<script type="text/javascript" src="js/jquery-ui.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				var x=$('#target').width();
+				var y=$('#target').height();
+				$('button').each(function(idx, ele){
+					$(ele).click(function(){
+						
+						/* if(idx == 0){
+							$('#target').fadeOut(3000);	
+						}						
+						if(idx == 1){
+							$('#target').fadeIn(3000);	
+						}						
+						if(idx == 2){
+							$('#target').fadeToggle(3000);	
+						}	 */		
+						
+						/* if(idx == 0){
+							$('#target').slideUp(1000);	
+						}						
+						if(idx == 1){
+							$('#target').slideDown(1000);	
+						}						
+						if(idx == 2){
+							$('#target').slideToggle(1000);	
+						} */						
+						
+						/* $('#target').animate({left:'300px', top:'300px'},2000, 'easeOutBounce'); */
+						$('#target').animate({'left':'300px'});
+						$('#target').animate({'top':'300px'});
+					});					
+				});				
+			});
+		</script>
+	</head>
+	<body>
+		<button>숨김</button>
+		<button>보기</button>
+		<button>토글</button>
+		<div id = "target"></div>
+	</body>
+</html>

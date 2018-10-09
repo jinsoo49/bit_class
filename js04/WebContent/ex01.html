@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<style type="text/css">
+			button {
+				top: 0px;
+				position: fixed;
+			}
+		</style>
+		<script type="text/javascript">
+		// 브라우저 객체 모델(BOM:Browser Object Model)
+		/*
+		1. window
+		2. history
+		3. location
+		4. navigator
+		5. screen		
+		
+		*/
+		
+		var w = window.screen.width;
+		var h = window.screen.height;
+		var c = window.screen.colorDepth;
+		var w2 = window.screen.availWidth;
+		var h2 = window.screen.availHeight;
+		
+		console.log("width : "+w);
+		console.log("height : "+h);
+		console.log("colorDepth : "+c);
+		console.log("availWidth : "+w2);	// 사용 가능한 사이즈
+		console.log("availHeight : "+h2);
+		
+		
+		// function을 만들어서 호출하는 방식 -> 클릭시에 새창
+		// 바로 open하게 되면 팝업창 형식으로 작동
+		var f;
+		function func01(){
+			f=window.open('', 'myframe', 'width=100,height=100');
+		}
+		function func02(){
+			// f.moveBy(100, 100);						// (상대) 이동
+			// f.moveTo(300, 300);						// (절대) 이동
+			
+			// f.resizeBy(300, 300);					// (상대) 크기조정
+			// f.resizeTo(300, 300);					// (절대) 크기조정
+			
+			// window.scrollBy(0, 10);					// (상대) 스크롤 이동
+			// window.scrollto(10, 10);					// (절대) 스크롤 이동
+		}
+		
+		</script>
+	</head>
+	<body>
+		<button onclick="func01();">새창열기</button>
+		<button onclick="func02();">다음열기</button>
+		
+		<br>
+		_blank - URL is loaded into a new window. This is default<br>
+		_parent - URL is loaded into the parent frame<br>
+		_self - URL replaces the current page<br>
+		_top - URL replaces any framesets that may be loaded<br>
+		name - The name of the window (Note: the name does not specify the title of the new window)<br>
+		출처 - <a href="https://www.w3schools.com/jsref/met_win_open.asp">https://www.w3schools.com/jsref/met_win_open.asp</a>
+	</body>
+</html>

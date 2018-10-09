@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">
+			function func02(a,b){
+				console.log(a,b);				// 100, undefined
+			}
+			func02(100);
+			
+			
+			function func03(){
+				console.log('arguments length : '+arguments.length);
+				console.log(arguments[0]);
+				console.log(arguments[1]);
+				console.log(arguments[2]);			
+			}						
+			func03(100, 200, 300);
+			
+			function func04(a, b){
+				console.log('func03 run...');
+				var sum="";		// 문자열이면 문자열을 더한 값 출력
+				if(typeof arguments[0]=='number')sum=0;
+				for(var i=0; i<arguments.length; i++){
+					sum+=arguments[i];
+				}
+				
+				
+				/* for(var i=0; i<arguments.length; i++){
+					if(i==0&&typeof arguments[0]=='number') sum=arguments[i];
+					else sum+=arguments[i];
+				} */
+				return sum;		
+			}
+			var su = func04(2,3,4,5);
+			alert(su);
+			
+			
+			function func05(a, b){
+				var su2 = {'key1':a,'key2':b};
+				return su2;
+			}
+			var temp = func05(1, 2);
+			console.log(temp);
+			
+			function func06(){
+				var msg = '인자로 전달된 함수';
+				var temp2 = function(){
+					alert(this.key1);
+				};
+				var obj={'key1':msg, 'key2':temp2}
+				return obj;
+			}
+			func06().key2();
+			
+		</script>
+	</head>
+	<body>
+	
+	</body>
+</html>

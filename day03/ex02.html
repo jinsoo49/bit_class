@@ -1,0 +1,70 @@
+<!Doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style>
+            
+            p{
+                border-bottom: black solid 1px;
+            }
+            h1{
+                text-align: center;
+                border-bottom: black solid 4px;
+            }
+            
+            p{
+                width: 500px;
+                margin: 0px auto;
+                text-indent: 10px;
+            }
+            p:first-letter{
+                font-size: 30px;
+                color: red;
+            }
+            p:first-line{
+                color:blue;
+            }
+            #result:first-line{
+                font-weight: bold;
+            }
+            strong{
+                font-style: italic;
+            }
+            mark{
+                background-color: fuchsia;
+                color: white;
+                font-weight: bold;
+            }
+            p>span{
+                color: forestgreen;
+                font-size: 2em;
+                font-weight: bold;
+            }
+            cite{
+                font-size: 1.5em;
+                font-style: normal;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>텍스트</h1>
+        <p>HTML5는 HTML의 완전한 5번째 버전으로 월드 와이드 웹 (World Wide Web)의 핵심 마크업 언어이다. 2004년 7월 <strong>Web Hypertext Application Technology Working Group(WHATWG)</strong>에서 <mark>웹 애플리케이션 1.0</mark>이라는 이름으로 세부 명세 작업을 시작하였다.</p>
+        <p>
+        HTML5는 HTML 4.01, XHTML 1.0, DOM 레벨 2 HTML에 대한 차기 표준 제안이다. 비디오, 오디오 등 <span>다양한 부가기능</span>과 최신 멀티미디어 콘텐츠를 액티브X 없이 <mark>브라우저</mark>에서 쉽게 볼 수 있게 하는 것을 목적으로 한다.</p>
+        <p id="result">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br/>
+        묶음<br/>
+        &lt;div&gt; - <cite>블록</cite> 단위로 묶음<br/>
+        &lt;span&gt; - <cite>인라인</cite> 단위로 묶음<br/>
+        <br/>
+        강조<br/>
+        <cite>&lt;em&gt;</cite> (emphasized text)<br/>
+        <cite>&lt;String&gt;</cite> (important text)<br/>
+        <cite>&lt;mark&gt;</cite> (marked/highlighted text)<br/>
+        <cite>&lt;cite&gt;</cite> (the title of a word)<br/>
+        <cite>&lt;dfn&gt;</cite> (a definition term)<br/>
+        
+        
+        </p>
+    </body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script type="text/javascript">
+		//제어문
+		//1. 조건 if, switch
+			/*
+			var a = 'a';
+			var b = 'b';
+			var key = a+b;
+			
+			switch(key){
+			case 'aa':
+				alert('1입니다');
+				break;
+			case 'bb':
+				alert('2입니다');
+				break;
+			case 'cc':
+				alert('3입니다');
+				break;
+			default:
+				alert('글쎄요');
+				break;
+			}
+			*/
+		//--------------------------------------------------------------
+		//2. 반복문 while, for, for in
+			//for
+			/*
+			var i = 'aaaa';
+			for(var i=0; i<10; i++){
+				console.log(i);
+			}
+			alert(i);	// 10 출력
+			*/
+			
+			//for in
+			/*
+			var arr=['item1','item2','item3','item4'];
+			for(var z in arr){
+				console.log(arr[z]);				
+			}
+			
+			
+			//while
+			var j = 10;
+			while(j<20){
+				console.log(j++);	// 10, 11, 12~19
+			}
+			*/
+		//--------------------------------------------------------------
+		//3.함수 - 함수의 정의와 실행시점
+			function func01 (a){
+				alert(a+'함수실행');
+			}
+			func01('a');	// 인자가 있음에도 불구하고 마지막에 있는 인자없는~이 실행됨
+		
+		</script>
+		<title>Insert title here</title>
+	</head>
+	<body>
+		<h1>제목</h1>
+		<script type="text/javascript">
+			var a=50;
+		</script>
+		<input type="button" value="함수실행" onclick="func01(a)">
+	</body>
+</html>

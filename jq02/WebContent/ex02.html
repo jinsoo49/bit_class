@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<style type="text/css">
+			.cl01{
+				background-color: silver;
+			}
+			.cl02{
+				color: gray;
+			}
+			.cl03{
+				color: green;
+			}
+			.cl04{
+				color: navy;
+			}
+			.cl05{
+				color: orange;
+			}
+			.cl06{
+				color: aqua;
+			}
+			#id01{
+				color: red;
+			}
+			#id02{
+				background-color: blue;
+			}
+			
+		</style>
+		<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+		<script type="text/javascript">
+		var su = 0;
+			window.onload = function(){
+				$('h1').attr('class', 'cl01');
+				$('li').attr('style', 'color:red');
+				
+				/* $('h1').addClass('cl01').addClass('cl02');
+				$('li').each(function(){
+					su++;
+					$(this).addClass('cl0'+su)
+				});
+				$('li').addClass(function(idx, name){
+					console.log(name)
+				});
+				// 부여된 모든 클래스 삭제
+				$('h1').removeClass(function(idx, name){
+					$(this).removeClass(name);
+				}); */
+			};
+		</script>
+	</head>
+	<body>
+		<h1>디자인 속성</h1>
+		<p class="cl01 cl02">css 말고</p>
+		<ul>
+			<li>item1</li>
+			<li>item2</li>
+			<li>item3</li>
+			<li>item4</li>
+			<li>item5</li>
+		</ul>
+	</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<style type="text/css">
+			div{
+				width: 300px;
+				height: 300px;
+				border: solid 1px black;
+			}
+		</style>
+		<script type="text/javascript">
+			var input,div,select,chkbox,btn;
+			function func01(){
+				// console.log('이벤트 발생');
+				var msg = input.value;
+				div.innerHTML += msg+'<br/>';
+				input.value="";
+			};
+			window.onload=function(){
+				input = document.querySelector('input[type="text"]');
+				div = document.querySelector('div');
+				select = document.querySelector('select');
+				chkbox = document.querySelectorAll('input[type="checkbox"]')
+				btn = document.querySelector('button');
+				input.onchange = func01;				// 포커스를 받을때 onfocus <=> onblur
+													// value값을 넣을시에 - onchange
+				select.onchange = func01;				// onchange - java의 actionlistener랑 비슷, (객체 고유의 속성 변화)
+				chkbox[0].onchange = func01;
+				chkbox[1].onchange = func01;
+				chkbox[2].onchange = func01;
+				select.onchange = function(){
+					console.log('select index : '+this.select.value);
+				};
+				//btn.onclick = func01;
+				for(var i=0; i<chkbox.length; i++){
+					chkbox[i].onchange = function(){
+						console.log(this.value+'됨'+this.checked);
+						if(this.checked){
+							div.innerHTML += "라디오박스["+i+"] = "+this.value+"<br/>";
+						}
+					};
+				}
+				
+			};
+		</script>
+	</head>
+	<body>
+		<input type="text"/>
+		<br/>
+		<button>button</button>
+		<select>
+			<option value="sel1">item1</option>
+			<option value="sel2">item2</option>
+			<option value="sel3">item3</option>
+		</select>
+		<br/>
+		<input type="checkbox" value="chk1"/>item1
+		<input type="checkbox" value="chk2"/>item2
+		<input type="checkbox" value="chk3"/>item3
+		<div>
+		</div>
+	</body>
+</html>

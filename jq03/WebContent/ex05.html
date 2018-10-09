@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('button').each(function(idx, ele){
+					$(ele).click(function(){
+						console.log('bttn'+idx+" click");
+						if(idx == 0){
+							$('div').fadeOut({
+								duration : 1000,
+								easing : 'linear'			// swing 가석 linear 일정
+							});							
+						}else if(idx == 1){
+							$('div').fadeIn({
+								duration: 'slow',
+								complete: function(){
+									alert('끝');
+								}
+							});
+						}else if(idx == 2){
+							$('div').fadeToggle();
+						}
+					});
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<button>숨김</button>
+		<button>보기</button>
+		<button>토글</button>
+		<div>
+			jQuery is a lightweight, "write less, do more", JavaScript library.<br>
+			The purpose of jQuery is to make it much easier to use JavaScript on your website.<br>
+			jQuery takes a lot of common tasks that require many lines of JavaScript code to accomplish, and wraps them into methods that you can call with a single line of code.<br>		
+			jQuery also simplifies a lot of the complicated things from JavaScript, like AJAX calls and DOM manipulation.<br>
+		</div>
+	</body>
+</html>

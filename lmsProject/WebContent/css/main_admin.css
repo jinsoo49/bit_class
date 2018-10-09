@@ -1,0 +1,190 @@
+@CHARSET "UTF-8";
+.container{
+				width: 1200px;
+				height: 698px;
+			}
+			
+			.menuBar{
+				width: 230px;
+				height: 698px;
+				background-color: #968973;
+				float: left;
+			}
+			
+			a {
+				text-decoration: none;	
+				color: black;			
+			}
+			
+			#menu{
+				width: 230px;
+				height: 68px;				
+				font-size: 22px;
+				font-weight: bold;				
+				text-align: center;
+				display: inline-block;
+				color: white;
+			}
+			#menu>a, #menu>div>a{
+				color: white;
+				display: block;
+			}
+			
+			.logo{
+				width: 228px;
+				height: 82px;
+			}
+			
+			.main{
+				width: 970px;
+				height: 698px;
+				float: right;
+			}		
+			
+			.top{
+				width: 970px;
+				height: 52px;
+				border-bottom: 1px solid gray;
+				float: right;
+			}
+			.login{
+				width: 390px;
+				height: 52px;
+				float: right;
+				line-height: 50px;
+			}
+			.memberLogin{
+				background-color: #C4D2E3;
+				border: 1px solid gray;
+				border-radius: 6px;
+				width: 70px;
+				height: 30px;
+				font-weight: bold;
+				outline: 0px;
+			}
+			.id, .pw{
+				padding:8px;
+				border:none;
+				border-bottom:1px solid #ccc;
+				width: 80px;
+			}
+			
+			.main{
+				width: 970px;
+				height: 532px;
+				float: right;
+			}
+			.footer{
+				width: 970px;
+				height: 112px;
+				border-top: 1px solid gray;
+				float: right;
+			}
+			.footer>img{
+				margin-left: 50px;
+				margin-top: 10px;
+				float: left;
+			}
+			.footer>p{
+				margin-left: 15px;
+				float: left;
+				margin-bottom: 0px;
+				margin-top: 10px;
+			}
+			
+			.recruit{
+				position: absolute;
+				left: 238px;	
+				top: 220px;
+				width: 180px;
+				height: 100px;
+				background-color: #E3D8C4;
+				display: none;	
+			}
+			
+			.recruit>div, .cla>div, .edu>div, .bbs>div{
+				width: 180px;
+				height: 30px;
+				background: rgba(0, 0, 0, 0);
+				font-size: 17px;
+				vertical-align: middle;
+			}
+			.recruit>div>a{
+				display: block;
+			}
+			.recruit_admin{
+				margin-top: 17px;			
+			}
+			
+			.stu_assign{
+				margin-top: 10px;
+			}
+			
+			
+			.cla{
+				position: absolute;
+				left: 238px;	
+				top: 280px;
+				width: 180px;
+				height: 180px;
+				background-color: #E3D8C4;
+				display: none;	
+			}
+			.cla>div>a{
+				display: block;
+			}
+			.clasetup{
+				margin-top: 17px;			
+			}
+			
+			.clalist, .claroomlist, .tealist{
+				margin-top: 10px;
+			}
+			.edu{
+				position: absolute;
+				left: 238px;	
+				top: 350px;
+				width: 180px;
+				height: 150px;
+				background-color: #E3D8C4;
+				display: none;	
+			}
+			.edu>div>a{
+				display: block;
+				margin: 0px auto;
+			}
+			.educla{
+				margin-top: 14px;			
+			}
+			
+			.edugra, .edustu{
+				margin-top: 10px;
+			}
+			
+			.bbs{
+				position: absolute;
+				left: 238px;	
+				top: 420px;
+				width: 180px;
+				height: 100px;
+				background-color: #E3D8C4;
+				display: none;	
+			}
+			}
+			.bbs>div>a{
+				display: block;
+			}
+			.bbsstu{
+				margin-top: 17px;			
+			}
+			
+			.bbsadvice{
+				margin-top: 13px;
+			}
+			
+			.recruitover, .mainbutton, .clabutton, .edubutton, .bbsbutton, .indexbutton{
+				width: 230px;
+				height: 50px;
+				background: rgba(255, 255, 255, 0);
+				line-height: 45px;
+			}

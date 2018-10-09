@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">
+		
+		// 클로져, java의 bean과 유사한 퍼포먼스, setter - getter
+		function func3(a,b){
+			var su = 111;
+			
+			var temp=function(a){
+				this.data=a;
+			};
+			
+			var temp2=function(){
+				return this.data;
+			}
+			return {'data':su,'setter':temp,'getter':temp2};
+		}
+		var msg = func3();
+		msg.setter(3333)
+		console.log(msg.getter());
+		</script>
+	</head>
+	<body>
+	
+	</body>
+</html>

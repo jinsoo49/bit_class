@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">
+			function bean(){
+				return {'num':0, 'kor':0, 'math':0, 'num':0,
+						'getNum':function(){return this.num}, 
+						'getKor':function(){return this.kor}, 
+						'getMath':function(){return this.math}, 
+						'getEng':function(){return this.eng},
+						'setNum':function(num){this.num=num;}, 
+						'setKor':function(kor){this.kor=kor;}, 
+						'setMath':function(math){this.math=math;},
+						'setEng':function(eng){this.eng=eng;} 
+				}
+			}
+		
+			var arr = [];
+			
+			var dto=bean();
+			dto.setNum(11);
+			dto.setKor(90);
+			dto.setEng(70);
+			dto.setMath(30);
+			arr.push(dto);
+			
+			var dto=bean();
+			dto.setNum(22);
+			dto.setKor(10);
+			dto.setEng(20);
+			dto.setMath(30);
+			arr.push(dto);
+			
+			document.write("<h1>성적관리프로그램</h1>");
+			document.write("<table>");
+				document.write("<tr>");
+					document.write("<td>");
+					document.write("학번");
+					document.write("</td>");
+					document.write("<td>");
+					document.write("국어");
+					document.write("</td>");
+					document.write("<td>");
+					document.write("수학");
+					document.write("</td>");
+					document.write("<td>");
+					document.write("영어");
+					document.write("</td>");
+				document.write("</tr>");
+				
+			for(var i in arr){
+				document.write("<tr>");
+					document.write("<td>");
+					document.write(arr[i].getNum());
+					document.write("</td>");
+					document.write("<td>");
+					document.write(arr[i].getKor());
+					document.write("</td>");
+					document.write("<td>");
+					document.write(arr[i].getMath());
+					document.write("</td>");
+					document.write("<td>");
+					document.write(arr[i].getEng());
+					document.write("</td>");
+				document.write("</tr>");
+			}
+			document.write("<table>");
+		</script>
+	</head>
+	<body>
+	
+	</body>
+</html>

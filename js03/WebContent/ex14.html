@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">
+		function go(a){
+			// 절대, 상대
+			// window.location.replace(a+".html");			
+			location.href=a+".html";
+		}
+		
+		function re(){
+			window.location.reload();
+		}
+		
+		console.log("href : "+location.href);					
+		console.log("protocol : "+location.protocol);
+		console.log("host : "+location.host);
+		console.log("hostname : "+location.hostname);
+		console.log("port : "+location.port);
+		console.log("pathname : "+location.pathname);
+		console.log("search : "+location.search);				// 피라미터값
+		
+		</script>
+	</head>
+	<body>
+		<button onclick="go('ex15');">go</button>
+		<button onclick="go('ex02');">go</button>
+		<button onclick="go('ex01');">go</button>
+		<input type="text">
+		<button onclick="re();">reload</button>
+	</body>
+</html>

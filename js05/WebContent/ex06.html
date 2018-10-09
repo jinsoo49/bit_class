@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<style type="text/css">
+			div{
+				width: 300px;
+				height: 300px;
+				background-color: yellow;
+			}
+		</style>
+		<script type="text/javascript">
+			var input, div;
+			window.onload = function(){
+				input = document.querySelector('input');
+				div = document.querySelector('div');
+				input.onkeydown = function(e){
+					console.log(e.keyCode+'keydown');			// e.keyCode -> 코드값으로 불러옴
+				};
+				input.onkeyup = function(e){
+					console.log(e.keyCode+'keyup');
+				};
+				input.onkeypress = function(e){
+					console.log(e.keyCode+'keypress');
+				};
+			};
+		</script>
+	</head>
+	<body>
+		<h1>키보드 이벤트</h1>
+		<input type="text" />
+		<div>
+			
+		</div>
+	</body>
+</html>
